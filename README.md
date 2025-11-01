@@ -8,7 +8,7 @@ This repository contains a compact, end-to-end image-captioning pipeline develop
 
 To implement a minimal but complete image-captioning system that demonstrates the full experimental flow: data preprocessing and vocabulary construction, dataset batching and collation, visual inspection of preprocessed samples, a ResNet-based image encoder, an LSTM text decoder with inference sampling, and a stable training procedure with checkpoints and recorded losses.
 
-## What was implemented (concise, factual)
+## What was implemented 
 
 * **Preprocessing and vocabulary**: caption tokenization, frequency counting, vocabulary construction and persistence. Captions are converted to numerical token sequences with explicit start/end markers.
 
@@ -46,7 +46,7 @@ All experiments ran from the project root using the COCO dataset placed under `d
 
 The training runs used a frozen encoder by default, and the optimizer was configured to update the decoder and the encoder’s projection/batch-normalization parameters only.
 
-## Files overview (what each file contains, no code excerpts)
+## Files overview
 
 * `preprocess.py` — tokenization, vocabulary build/save/load, and image transform utilities.
 * `data_loader.py` — COCO dataset implementation, collation and loader helper returning batched tensors and lengths.
@@ -56,7 +56,7 @@ The training runs used a frozen encoder by default, and the optimizer was config
 * `train.py` — orchestrates training: data loading, forward/backward steps, packing/alignment, checkpointing and logging.
 * Directories produced or used by scripts: `preprocessed/` and `checkpoints/`.
 
-## How to reproduce the recorded runs (high level)
+## How to reproduce the recorded runs 
 
 1. Place COCO images and caption JSON under the `data/coco/` directory following the structural conventions used in the project.
 2. Run the vocabulary builder to create the persisted vocabulary file.
@@ -74,7 +74,3 @@ The training runs used a frozen encoder by default, and the optimizer was config
 ## Final statement
 
 The codebase implements and validates a complete image-captioning workflow end-to-end. All implemented components, robustness fixes and artifacts mentioned above are present in the repository. This README documents the exact work performed and the outputs produced during development.
-
----
-
-If you would like, I can now write this exact text to `README.md` in the project repository. Confirm and I will add the file.
